@@ -32,6 +32,13 @@ xpack.monitoring.enabled: false
 xpack.watcher.enabled: false
 {% endif %}
 
+{% if not "ml" in es_xpack_features %}
+xpack.ml.enabled: false
+{% endif %}
+
+{% if not "graph" in es_xpack_features %}
+xpack.graph.enabled: false
+{% endif %}
 
 #################################### Bootstrap ####################################
 bootstrap.system_call_filter: false
