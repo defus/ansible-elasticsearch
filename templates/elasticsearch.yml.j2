@@ -44,9 +44,9 @@ xpack.graph.enabled: false
 bootstrap.system_call_filter: false
 
 #################################### SSL ##########################################
-xpack.security.transport.ssl.enabled: {{ssl_enabled | false}}
-xpack.security.http.ssl.enabled: {{ssl_enabled | false}}
 {% if keystore_path is defined %}
+xpack.security.transport.ssl.enabled: true
+xpack.security.http.ssl.enabled: true
 xpack.ssl.keystore.path: {{keystore_path}}
 xpack.ssl.keystore.password: changeit
 xpack.security.transport.ssl.keystore.path: {{keystore_path}}
